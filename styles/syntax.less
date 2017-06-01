@@ -1,16 +1,103 @@
+// Mixins
+
+.syntax--orange {
+  display: inline-block;
+  color: @orange-dark;
+  background: @orange-light-trn;
+}
+
+.syntax--green {
+  color: @green-dark;
+  background: @green-light-trn;
+}
+
+.syntax--blue {
+  color: @blue-dark;
+  background: @blue-light-trn;
+}
+
+.syntax--purple {
+  color: @purple-dark;
+  background: @purple-light-trn;
+}
+
+.syntax--reset {
+  color: inherit;
+  background: none;
+}
+
+.syntax--reset-all {
+  .syntax--string.syntax--quoted,
+  .syntax--string.syntax--punctuation,
+  .syntax--string.syntax--regexp,
+  .syntax--numeric,
+  .syntax--boolean,
+  .syntax--nil {
+    .syntax--reset();
+  }
+
+}
+
+
+
 // Global syntax styles
 
 .syntax--comment {
   &.syntax--block,
   &.syntax--line {
-    // display: inline-block;
-    // color: @orange-black;
-    // background: @orange-light-trn;
+    .syntax--orange();
     font-style: italic;
 
     .syntax--comment.syntax--punctuation {
-      // color: @orange-dark;
+      color: @orange-medium;
       background: none;
+    }
+  }
+}
+
+.syntax--string {
+  &.syntax--quoted {
+    .syntax--green();
+
+    .syntax--punctuation.syntax--string {
+      color: @green-medium;
+    }
+  }
+
+  &.syntax--regexp {
+    .syntax--green();
+
+    .syntax--punctuation.syntax--definition {
+      color: @green-medium;
+    }
+  }
+}
+
+.syntax--constant {
+  &.syntax--numeric, &.syntax--boolean, &.syntax--nil {
+    .syntax--blue();
+  }
+
+}
+
+
+// HTML
+.syntax--html {
+  .syntax--meta {
+    &.syntax--tag {
+      .syntax--entity {
+        &.syntax--name {
+          font-weight: bold;
+        }
+
+        &.syntax--attribute-name {
+          font-style: italic;
+        }
+      }
+
+      .syntax--punctuation.syntax--definition.syntax--tag {
+        color: @gray;
+      }
     }
   }
 }

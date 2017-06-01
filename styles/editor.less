@@ -33,7 +33,7 @@ atom-text-editor {
   .gutter .line-number.folded,
   .gutter .line-number:after,
   .fold-marker:after {
-    color: @light-gray;
+    color: @gray;
   }
 
   .invisible {
@@ -46,6 +46,12 @@ atom-text-editor {
 
   .selection .region {
     background-color: @syntax-selection-color;
+  }
+
+  .bracket-matcher .region {
+    border-bottom: 1px solid @purple-vivid;
+    position: absolute;
+    // background-color: @teal-light-trn;
   }
 }
 

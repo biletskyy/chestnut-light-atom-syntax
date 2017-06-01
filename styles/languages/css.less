@@ -1,0 +1,30 @@
+.syntax--source.syntax--css {
+
+  .syntax--class:not(.syntax--mixin){
+    font-weight: bold;
+  }
+
+  .syntax--constant.syntax--support {
+    .syntax--blue();
+  }
+
+  .syntax--rgb-value {
+    .syntax--blue();
+  }
+
+  .syntax--unit {
+    .syntax--blue();
+  }
+
+  .syntax--bracket.syntax--curly {
+    color: @gray;
+  }
+
+  .syntax--punctuation {
+    &.syntax--separator,
+    &.syntax--terminator {
+      color: @gray;
+    }
+  }
+
+}
