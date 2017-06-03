@@ -32,10 +32,10 @@
   .syntax--string.syntax--regexp,
   .syntax--numeric,
   .syntax--boolean,
+  .syntax--constant .syntax--punctuation,
   .syntax--nil {
     .syntax--reset();
   }
-
 }
 
 
@@ -70,14 +70,35 @@
     .syntax--punctuation.syntax--definition {
       color: @green-medium;
     }
+
+    .syntax--regexp {
+      .syntax--reset();
+    }
   }
 }
 
 .syntax--constant {
-  &.syntax--numeric, &.syntax--boolean, &.syntax--nil {
+  &.syntax--symbol,
+  &.syntax--keyword,
+  &.syntax--numeric,
+  &.syntax--boolean,
+  &.syntax--null,
+  &.syntax--nil {
     .syntax--blue();
+
+    .syntax--punctuation.syntax--definition {
+      color: @blue-medium;
+    }
   }
 
+
+
+}
+
+.syntax--keyword {
+  &.syntax--control {
+    font-weight: bold;
+  }
 }
 
 

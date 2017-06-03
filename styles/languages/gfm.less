@@ -1,59 +1,66 @@
 .syntax--source.syntax--gfm {
-  // .syntax--markup {
-  //   &.syntax--heading {
-  //     .syntax--purple();
-  //     display: inline-block;
-  //
-  //     .syntax--markup {
-  //       background: none;
-  //       color: @purple-dark;
-  //     }
-  //   }
-  //
-  //   &.syntax--italic { font-style: italic; }
-  //
-  //   &.syntax--bold { font-weight: bold; }
-  //
-  //   &.syntax--strike { text-decoration: line-through; }
-  //
-  //   &.syntax--code,
-  //   &.syntax--raw {
-  //     display: inline-block;
-  //     .syntax--orange();
-  //
-  //     .syntax--support {
-  //       color: @orange-dark;
-  //     }
-  //
-  //     .syntax--source.syntax--embedded {
-  //       * { .syntax--reset(); }
-  //     }
-  //
-  //   }
-  // }
-  //
-  // .syntax--link {
-  //   display: inline-block;
-  //   .syntax--blue();
-  //
-  //   .syntax--link { .syntax--reset; }
-  //
-  //   .syntax--punctuation.syntax--definition {
-  //     color: @blue-dark;
-  //   }
-  // }
-  //
-  // .syntax--comment {
-  //   display: inline-block;
-  //   font-style: normal;
-  //   .syntax--green;
-  //
-  //
-  //   .syntax--link,
-  //   .syntax--comment { .syntax--reset; }
-  //
-  //   .syntax--support.syntax--quote {
-  //     color: @green-dark;
-  //   }
-  // }
+  .syntax--markup {
+    &.syntax--heading {
+      .syntax--purple();
+      display: inline-block;
+
+      .syntax--markup {
+        background: none;
+        color: @purple-medium;
+      }
+    }
+
+    &.syntax--italic { font-style: italic; }
+
+    &.syntax--bold { font-weight: bold; }
+
+    &.syntax--strike { text-decoration: line-through; }
+
+    &.syntax--code,
+    &.syntax--raw {
+      display: inline-block;
+      .syntax--orange();
+
+      .syntax--support {
+        color: @orange-dark;
+      }
+
+      .syntax--source.syntax--embedded {
+        * { .syntax--reset(); }
+      }
+
+    }
+
+
+
+  }
+
+  .syntax--comment {
+    display: inline-block;
+    font-style: normal;
+    .syntax--green();
+
+
+    .syntax--link,
+    .syntax--comment { .syntax--reset; }
+
+    .syntax--support.syntax--quote {
+      color: @green-medium;
+    }
+  }
+
+  .syntax--link {
+    .syntax--blue();
+
+    .syntax--entity {
+      // font-weight: bold;
+    }
+
+    .syntax--link { .syntax--reset; }
+
+    .syntax--punctuation.syntax--definition {
+      color: @blue-medium;
+    }
+  }
+
 }

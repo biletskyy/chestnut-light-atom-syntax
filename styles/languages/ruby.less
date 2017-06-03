@@ -12,20 +12,21 @@
     .syntax--class,
     .syntax--function {
       &.syntax--name {
-        font-weight: bold;
+        .syntax--purple();
       }
     }
   }
 
-  .syntax--constant {
-    &.syntax--symbol {
-      .syntax--blue();
-
-      .syntax--punctuation.syntax--definition {
-        color: @blue-medium;
-      }
-    }
-  }
+  // TODO delete if works without
+  // .syntax--constant {
+  //   &.syntax--symbol {
+  //     .syntax--blue();
+  //
+  //     .syntax--punctuation.syntax--definition {
+  //       color: @blue-medium;
+  //     }
+  //   }
+  // }
 
   .syntax--string {
     &.syntax--quoted {
@@ -38,7 +39,7 @@
 
 .syntax--html.syntax--ruby,
 .syntax--html.syntax--erb {
-  .syntax--source.syntax--embedded,
+  .syntax--rails.syntax--embedded,
   .syntax--meta.syntax--embedded {
     .syntax--reset-all-ruby();
 

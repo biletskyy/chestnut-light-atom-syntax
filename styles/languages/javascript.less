@@ -1,0 +1,17 @@
+.syntax--source.syntax--js {
+  .syntax--constant {
+    &.syntax--key {
+      .syntax--blue();
+    }
+  }
+
+  .syntax--variable {
+    &.syntax--other:not(.syntax--object) {
+      font-weight: bold;
+    }
+
+    &.syntax--this {
+      font-style: italic;
+    }
+  }
+}
