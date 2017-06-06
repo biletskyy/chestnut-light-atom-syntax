@@ -1,7 +1,6 @@
 // Mixins
 
 .syntax--orange {
-  display: inline-block;
   color: @orange-dark;
   background: @orange-light-trn;
 }
@@ -32,7 +31,9 @@
   .syntax--string.syntax--regexp,
   .syntax--numeric,
   .syntax--boolean,
-  .syntax--constant .syntax--punctuation,
+  .syntax--constant.syntax--keyword,
+  .syntax--constant.syntax--symbol,
+  .syntax--constant .syntax--punctuation.syntax--definition,
   .syntax--nil {
     .syntax--reset();
   }
@@ -46,6 +47,7 @@
   &.syntax--block,
   &.syntax--line {
     .syntax--orange();
+    display: inline-block;
     font-style: italic;
 
     .syntax--comment.syntax--punctuation {
@@ -56,19 +58,17 @@
 }
 
 .syntax--string {
+  &.syntax--regexp,
   &.syntax--quoted {
     .syntax--green();
 
+    .syntax--punctuation.syntax--definition,
     .syntax--punctuation.syntax--string {
       color: @green-medium;
     }
-  }
 
-  &.syntax--regexp {
-    .syntax--green();
-
-    .syntax--punctuation.syntax--definition {
-      color: @green-medium;
+    .syntax--embedded {
+      .syntax--reset-all();
     }
 
     .syntax--regexp {

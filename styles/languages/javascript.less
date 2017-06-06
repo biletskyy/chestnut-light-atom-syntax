@@ -1,4 +1,15 @@
 .syntax--source.syntax--js {
+
+  .syntax--meta.syntax--function {
+    .syntax--entity.syntax--name.syntax--function {
+      .syntax--purple();
+    }
+
+    .syntax--storage.syntax--function {
+      font-weight: bold;
+    }
+  }
+
   .syntax--constant {
     &.syntax--key {
       .syntax--blue();
@@ -6,12 +17,46 @@
   }
 
   .syntax--variable {
-    &.syntax--other:not(.syntax--object) {
-      font-weight: bold;
-    }
-
     &.syntax--this {
       font-style: italic;
     }
   }
+
+  .syntax--storage {
+    &.syntax--var {
+      font-weight: bold;
+    }
+  }
+
+}
+
+.syntax--source.syntax--jsx {
+
+  .syntax--entity.syntax--name.syntax--class {
+    .syntax--purple();
+  }
+
+  .syntax--storage.syntax--type {
+    font-weight: bold;
+  }
+
+  .syntax--meta {
+    &.syntax--function-call,
+    &.syntax--method-call {
+      .syntax--entity.syntax--name.syntax--function {
+        .syntax--reset();
+      }
+    }
+  }
+
+  .syntax--meta.syntax--tag {
+    .syntax--entity.syntax--name.syntax--tag {
+      font-weight: bold;
+    }
+
+    .syntax--punctuation.syntax--definition.syntax--tag {
+      color: @gray;
+    }
+  }
+
 }

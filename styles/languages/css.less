@@ -1,7 +1,7 @@
 .syntax--source.syntax--css {
 
+  .syntax--meta.syntax--selector .syntax--entity.syntax--name.syntax--tag,
   .syntax--class:not(.syntax--mixin){
-    // font-weight: bold;
     .syntax--purple();
   }
 
@@ -9,11 +9,11 @@
     .syntax--blue();
   }
 
-  .syntax--rgb-value {
-    .syntax--blue();
+  .syntax--keyword {
+    .syntax--reset();
   }
 
-  .syntax--unit {
+  .syntax--rgb-value {
     .syntax--blue();
   }
 
@@ -25,6 +25,13 @@
     &.syntax--separator,
     &.syntax--terminator {
       color: @gray;
+    }
+  }
+
+  .syntax--comment {
+    .syntax--class {
+      .syntax--reset();
+      font-weight: bold;
     }
   }
 

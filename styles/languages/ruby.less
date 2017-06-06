@@ -1,12 +1,3 @@
-.syntax--reset-all-ruby {
-  .syntax--reset-all();
-
-  .syntax--constant.syntax--symbol {
-    .syntax--reset();
-  }
-}
-
-
 .syntax--source.syntax--ruby {
   .syntax--meta {
     .syntax--class,
@@ -17,31 +8,17 @@
     }
   }
 
-  // TODO delete if works without
-  // .syntax--constant {
-  //   &.syntax--symbol {
-  //     .syntax--blue();
-  //
-  //     .syntax--punctuation.syntax--definition {
-  //       color: @blue-medium;
-  //     }
-  //   }
-  // }
-
-  .syntax--string {
-    &.syntax--quoted {
-      .syntax--embedded {
-        .syntax--reset-all-ruby();
-      }
-    }
+  .syntax--name.syntax--module {
+    .syntax--purple();
   }
+
 }
 
 .syntax--html.syntax--ruby,
 .syntax--html.syntax--erb {
   .syntax--rails.syntax--embedded,
   .syntax--meta.syntax--embedded {
-    .syntax--reset-all-ruby();
+    .syntax--reset-all();
 
     .syntax--blue();
 
