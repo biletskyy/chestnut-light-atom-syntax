@@ -1,8 +1,8 @@
 {
   "name": "chestnut-light-atom-syntax",
   "theme": "syntax",
-  "version": "0.0.1",
-  "description": "Light minimal syntax theme",
+  "version": "0.0.0",
+  "description": "A light easy on the eyes theme with minimal amount of highlighting.",
   "keywords": [
     "light",
     "minimal",
