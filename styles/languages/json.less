@@ -1,7 +1,16 @@
 .syntax--source.syntax--json {
   .syntax--string {
     &.syntax--quoted {
-      .syntax--reset-all();
+      .syntax--reset();
+
+      .syntax--punctuation.syntax--definition,
+      .syntax--punctuation.syntax--string {
+        color: @gray;
+      }
     }
+  }
+
+  .syntax--punctuation.syntax--separator {
+    color: @gray;
   }
 }

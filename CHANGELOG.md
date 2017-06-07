@@ -1,5 +1,6 @@
 ## 0.1.1
 * Logo
+* JSON support
 
 ## 0.1.0
 * CSS support
