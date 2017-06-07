@@ -1,4 +1,4 @@
-# Chestnut Light Atom syntax theme
+<p align="center"><img src="ttps://github.com/biletskyy/chestnut-light-atom-syntax/raw/master/chestnut-logo.png" alt="Chestnut Light syntax theme for Atom" width="329px" height="70px"></p>
 
 A light easy on the eyes theme with minimal amount of highlighting.
 
