@@ -28,6 +28,7 @@ For good readability text has contrast 6:1 and it is consistent for all colors. 
 - HTML
 - [JavaScript](https://atom.io/packages/language-babel)
 - Ruby
+- PHP
 - Python
 
 ## Screenshot

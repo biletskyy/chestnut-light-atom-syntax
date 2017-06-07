@@ -1,6 +1,7 @@
-## 0.1.1
+## 0.2.0
 * Logo
 * JSON support
+* PHP support
 
 ## 0.1.0
 * CSS support

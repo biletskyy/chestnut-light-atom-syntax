@@ -1,0 +1,24 @@
+.syntax--text.syntax--php {
+
+  .syntax--entity.syntax--name {
+    &.syntax--class,
+    &.syntax--function {
+      .syntax--purple();
+    }
+  }
+
+  .syntax--constant.syntax--language {
+    .syntax--blue();
+  }
+
+  .syntax--storage {
+    &.syntax--class,
+    &.syntax--function {
+      font-weight: bold;
+    }
+  }
+
+  .syntax--punctuation.syntax--terminator.syntax--expression {
+    color: @gray;
+  }
+}
