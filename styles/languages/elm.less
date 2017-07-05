@@ -1,0 +1,31 @@
+.syntax--source.syntax--elm {
+
+  .syntax--entity.syntax--name.syntax--function {
+    .syntax--purple();
+  }
+
+  .syntax--meta {
+    &.syntax--import {
+
+      .syntax--entity.syntax--name.syntax--function {
+        .syntax--reset();
+      }
+    }
+  }
+
+  .syntax--keyword.syntax--other:not(.syntax--colon):not(.syntax--arrow) {
+    font-weight: bold;
+  }
+
+  // .syntax--meta.syntax--import {
+  //   .syntax--keyword.syntax--other { .syntax--purple; }
+  // }
+  //
+  // .syntax--support.syntax--type,
+  // .syntax--storage.syntax--type { .syntax--orange; }
+  //
+  // .syntax--constant.syntax--other { .syntax--blue; }
+  //
+  // .syntax--support.syntax--constant { .syntax--teal; }
+
+}

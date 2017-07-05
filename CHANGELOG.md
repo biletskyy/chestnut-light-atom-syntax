@@ -1,6 +1,7 @@
 ## unreleased
 * fix ERB embedded inside strings
 * WIP HAML support
+* WIP Elm support
 
 ## 0.2.0
 * Logo
