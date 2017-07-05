@@ -1,5 +1,6 @@
-## unreleased
+## 0.2.1
 * fix ERB embedded inside strings
+* README update
 * WIP HAML support
 * WIP Elm support
 
