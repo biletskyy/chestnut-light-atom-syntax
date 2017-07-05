@@ -1,3 +1,6 @@
+## unreleased
+* fix ERB embedded inside strings
+
 ## 0.2.0
 * Logo
 * JSON support

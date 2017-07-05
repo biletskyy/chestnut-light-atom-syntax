@@ -26,4 +26,16 @@
       color: @blue-medium;
     }
   }
+
+  .syntax--string {
+    &.syntax--quoted {
+      .syntax--embedded {
+        .syntax--reset();
+
+        .syntax--punctuation.syntax--section {
+          color: inherit;
+        }
+      }
+    }
+  }
 }
