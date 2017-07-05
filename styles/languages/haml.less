@@ -1,0 +1,52 @@
+.syntax--haml {
+
+  .syntax--meta {
+    &.syntax--tag {
+      font-weight: bold;
+
+      .syntax--punctuation.syntax--definition.syntax--tag {
+        color: @gray;
+      }
+    }
+
+    &.syntax--line.syntax--ruby {
+      .syntax--blue();
+
+      .syntax--string {
+        &.syntax--regexp,
+        &.syntax--quoted {
+          .syntax--reset();
+
+          .syntax--punctuation.syntax--definition,
+          .syntax--punctuation.syntax--string {
+            color: inherit;
+          }
+        }
+      }
+    }
+  }
+
+  .syntax--constant {
+    &.syntax--symbol {
+      .syntax--reset();
+    }
+  }
+
+
+  // .syntax--meta.syntax--tag {
+  //   .syntax--purple;
+  //   .syntax--punctuation.syntax--definition { .syntax--purple-sec; }
+  // }
+  //
+  // .syntax--meta.syntax--section.syntax--attributes {
+  //   .syntax--sec;
+  //
+  //   .syntax--constant.syntax--symbol {
+  //     .syntax--reset;
+  //     .syntax--attribute-mix;
+  //   }
+  // }
+  //
+  // .syntax--entity.syntax--tag.syntax--class { .syntax--blue; }
+
+}
