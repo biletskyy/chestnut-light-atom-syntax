@@ -1,0 +1,21 @@
+.syntax--perl {
+
+  .syntax--entity.syntax--name {
+    &.syntax--function {
+      .syntax--purple();
+    }
+  }
+
+  .syntax--constant.syntax--bareword {
+    .syntax--blue();
+  }
+
+  .syntax--storage,
+  .syntax--support {
+    &.syntax--modifier,
+    &.syntax--function,
+    &.syntax--sub {
+      font-weight: bold;
+    }
+  }
+}
