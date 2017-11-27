@@ -1,0 +1,19 @@
+.syntax--html {
+  .syntax--meta {
+    &.syntax--tag {
+      .syntax--entity {
+        &.syntax--name {
+          font-weight: bold;
+        }
+
+        &.syntax--attribute-name {
+          font-style: italic;
+        }
+      }
+
+      .syntax--punctuation.syntax--definition.syntax--tag {
+        color: @gray;
+      }
+    }
+  }
+}
