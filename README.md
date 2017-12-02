@@ -32,6 +32,8 @@ For good readability text has contrast 6:1 and it is consistent for all colors. 
 - Perl
 - PHP
 - Python
+- XML
+- YAML
 
 ## Screenshot
 
