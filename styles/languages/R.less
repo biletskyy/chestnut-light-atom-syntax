@@ -1,118 +1,118 @@
-// Mixins
-
-.syntax--orange {
-  color: @orange-dark;
-  background: @orange-light-trn;
-}
-
-.syntax--green {
-  color: @green-dark;
-  background: @green-light-trn;
-}
-
-.syntax--blue {
-  color: @blue-dark;
-  background: @blue-light-trn;
-}
-
-.syntax--purple {
-  color: @purple-dark;
-  background: @purple-light-trn;
-}
-
-.syntax--reset {
-  color: inherit;
-  background: none;
-}
-
-.syntax--function {
-  color: @orange-medium;
-  font-weight: bold;
-  background: inherit;
-}
-
-.syntax--assignment {
-  color: inherit;
-  background: white;
-}
-
-
-.syntax--reset-all {
-  .syntax--string.syntax--quoted,
-  .syntax--string.syntax--punctuation,
-  .syntax--string.syntax--regexp,
-  .syntax--numeric,
-  .syntax--boolean,
-  .syntax--constant.syntax--keyword,
-  .syntax--constant.syntax--symbol,
-  .syntax--nil {
-    .syntax--reset();
+.syntax--r {
+  .syntax--orange {
+    color: @orange-dark;
+    background: @orange-light-trn;
   }
-}
 
-
-
-// Global syntax styles
-
-.syntax--comment {
-  &.syntax--block,
-  &.syntax--line {
-    .syntax--orange();
-    display: inline-block;
-    font-style: italic;
-
-    .syntax--comment.syntax--punctuation {
-      color: @orange-medium;
-      background: none;
-    }
+  .syntax--green {
+    color: @green-dark;
+    background: @green-light-trn;
   }
-}
 
-.syntax--string {
-  &.syntax--regexp,
-  &.syntax--quoted {
-    .syntax--purple();
+  .syntax--blue {
+    color: @blue-dark;
+    background: @blue-light-trn;
+  }
 
-    .syntax--punctuation.syntax--definition,
-    .syntax--punctuation.syntax--string {
-      color: @green-medium;
-    }
+  .syntax--purple {
+    color: @purple-dark;
+    background: @purple-light-trn;
+  }
 
-    .syntax--embedded {
-      .syntax--reset-all();
-    }
+  .syntax--reset {
+    color: inherit;
+    background: none;
+  }
 
-    .syntax--regexp {
+  .syntax--function {
+    color: @orange-medium;
+    font-weight: bold;
+    background: inherit;
+  }
+
+  .syntax--assignment {
+    color: inherit;
+    background: white;
+  }
+
+
+  .syntax--reset-all {
+    .syntax--string.syntax--quoted,
+    .syntax--string.syntax--punctuation,
+    .syntax--string.syntax--regexp,
+    .syntax--numeric,
+    .syntax--boolean,
+    .syntax--constant.syntax--keyword,
+    .syntax--constant.syntax--symbol,
+    .syntax--nil {
       .syntax--reset();
     }
   }
-}
-
-.syntax--constant.syntax--language {
-  color: @red-bright;
-}
 
 
-.syntax--constant {
-  &.syntax--symbol,
-  &.syntax--keyword,
-  &.syntax--numeric,
-  &.syntax--boolean,
-  &.syntax--null,
-  &.syntax--nil {
-    .syntax--blue();
 
-    .syntax--punctuation.syntax--definition {
-      color: @blue-medium;
+  // Global syntax styles
+
+  .syntax--comment {
+    &.syntax--block,
+    &.syntax--line {
+      .syntax--orange();
+      display: inline-block;
+      font-style: italic;
+
+      .syntax--comment.syntax--punctuation {
+        color: @orange-medium;
+        background: none;
+      }
     }
   }
 
+  .syntax--string {
+    &.syntax--regexp,
+    &.syntax--quoted {
+      .syntax--purple();
+
+      .syntax--punctuation.syntax--definition,
+      .syntax--punctuation.syntax--string {
+        color: @green-medium;
+      }
+
+      .syntax--embedded {
+        .syntax--reset-all();
+      }
+
+      .syntax--regexp {
+        .syntax--reset();
+      }
+    }
+  }
+
+  .syntax--constant.syntax--language {
+    color: @red-bright;
+  }
 
 
-}
+  .syntax--constant {
+    &.syntax--symbol,
+    &.syntax--keyword,
+    &.syntax--numeric,
+    &.syntax--boolean,
+    &.syntax--null,
+    &.syntax--nil {
+      .syntax--blue();
 
-.syntax--keyword {
-  &.syntax--control {
-    font-weight: bold;
+      .syntax--punctuation.syntax--definition {
+        color: @blue-medium;
+      }
+    }
+
+
+
+  }
+
+  .syntax--keyword {
+    &.syntax--control {
+      font-weight: bold;
+    }
   }
 }
